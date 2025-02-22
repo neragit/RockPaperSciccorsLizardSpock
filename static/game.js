@@ -1,3 +1,4 @@
+console.log("game.js is loaded");
 
 // Form logic
 if (window.location.pathname === "/") {
