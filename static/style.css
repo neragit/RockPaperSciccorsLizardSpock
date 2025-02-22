@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choice-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.choice-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF7F50;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.choice-button:hover {
+    background-color: #FF6F61;
+    transform: translateY(-3px);
+}
+
+.choice-button:active {
+    background-color: #98FF98;
+    transform: translateY(2px);
+}
+
+.choice-button.selected {
+    background-color: #98FF98;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.choice-image {
+    margin-top: 5px;
+    height: 75px;
+}
+
+#rock-img { margin-right: 15px; }
+#paper-img { margin-right: 25px; margin-left: 15px; }
+#scissors-img { margin-right: 30px; }
+#lizard-img { margin-right: 20px; }
+#spock-img { margin-right: 20px; }
+
+h1 {
+    font-size: 2rem;
+    color: #FF6F61;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #FF6F61;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 20px;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result-message {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+    display: none;
+    text-align: center;
+}
+
+.result-win {
+    color: green;
+}
+
+.result-loss {
+    color: red;
+}
+
+.result-tie {
+    color: gray;
+}
+
+#ai-choice {
+    font-size: 1.5rem;
+    color: #FF6F61;
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+}
+
+#explanation-message {
+    font-size: 2rem;
+    color: #66CC66;
+    font-family: 'Baloo 2', cursive;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    margin: 10px 0;
+    border: 2px solid #FF7F50;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #FF6347;
+}
+
+form button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #FF7F50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FF6347;
+}
