@@ -26,6 +26,7 @@ if (window.location.pathname.endsWith("game.html")) {
 function chooseOption(choice) {
     const aiChoice = getAIChoice(choice);
     const result = determineWinner(choice, aiChoice);
+    const buttons = document.querySelectorAll('.choice-button');
     const resultMessageElement = document.getElementById("result-message");
     const explanationMessageElement = document.getElementById("explanation-message");
     
@@ -33,6 +34,18 @@ function chooseOption(choice) {
     
     resultMessageElement.textContent = result;
     resultMessageElement.style.display = "block";
+
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Remove the 'selected' class from all buttons
+            buttons.forEach(function(button) {
+                button.classList.remove("selected");
+            });
+    
+            // Add 'selected' class to the clicked button
+            this.classList.add("selected");
+        });
+    });
 
     if (explanationMessageElement) {
         if (result === "It's a tie!") {
