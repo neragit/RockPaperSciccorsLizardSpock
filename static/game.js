@@ -7,6 +7,7 @@ if (window.location.pathname === "/RockPaperSciccorsLizardSpock/") {
     console.log("Page is RockPaperSciccorsLizardSpock");
 
     document.getElementById("name-form").addEventListener("submit", function(event) {
+        event.preventDefault();
         console.log("Submitted");
         const playerName = document.getElementById("player-name").value;  // Get the player name entered in the form
         console.log("Form submitted, player name:", playerName);
