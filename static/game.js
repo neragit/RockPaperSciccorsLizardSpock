@@ -14,8 +14,8 @@ if (window.location.pathname === "/index.html") {
         if (playerName) {
             localStorage.setItem("playerName", playerName);  // Store the player name in localStorage
             console.log("Player name stored in localStorage.");
-            window.location.href = "./game.html";  // Redirect to game.html
             console.log("Redirecting to game.html");
+            window.location.href = "./game.html";  // Redirect to game.html
         } else {
             console.log("No player name entered!");
         }
@@ -26,13 +26,13 @@ if (window.location.pathname === "/index.html") {
 
 
 // Game logic
-if (window.location.pathname.endsWith("game.html")) {  // Check if the current page is game.html
+if (window.location.pathname.endsWith("game.html")) {
     const playerName = localStorage.getItem("playerName");  // Retrieve the player name from localStorage
-    console.log("Player name retrieved from localStorage:", playerName);  // Log the player name retrieved
+    console.log("Player name retrieved from localStorage:", playerName);
     if (playerName) {  // Check if the player name exists in localStorage
         document.getElementById("player-name").textContent = playerName;  // Display the player name on the page
     } else {
-        console.log("No player name found, redirecting to index.html");  // Log if no player name found
+        console.log("No player name found, redirecting to index.html");
         window.location.href = "index.html";  // Redirect to index.html if no player name is found
     }
 }
