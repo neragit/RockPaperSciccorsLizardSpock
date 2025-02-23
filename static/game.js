@@ -28,6 +28,7 @@ function chooseOption(choice) {
     const result = determineWinner(choice, aiChoice);
 
     document.getElementById("result-message").textContent = result;
+    resultMessageElement.style.display = "block";
     document.getElementById("ai-choice").textContent = `AI chose: ${aiChoice}`;
 }
 
