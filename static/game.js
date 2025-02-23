@@ -58,7 +58,7 @@ function chooseOption(choice) {
 function getAIChoice(playerChoice) {
     const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
     for (let aiChoice of choices) {
-        if (rulesMatrix[aiChoice][playerChoice] === 1) {
+        if (rulesMatrix[aiChoice][playerChoice] !== 1) {
             return aiChoice;
         }
     }
