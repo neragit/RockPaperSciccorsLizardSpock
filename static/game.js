@@ -3,7 +3,7 @@ console.log("game.js is loaded");
 // Form logic
 console.log("Current pathname:", window.location.pathname);
 
-if (window.location.pathname === "/index.html") { 
+if (window.location.pathname === "/RockPaperSciccorsLizardSpock/") { 
     console.log("Page is index.html");
 
     document.getElementById("name-form").addEventListener("submit", function(event) {
