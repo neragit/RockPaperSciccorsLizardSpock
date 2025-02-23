@@ -1,20 +1,25 @@
 console.log("game.js is loaded");
 
+console.log("game.js is loaded");
+
 // Form logic
 if (window.location.pathname === "/") {
     document.getElementById("name-form").addEventListener("submit", function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the form from submitting and reloading
         const playerName = document.getElementById("player-name").value;
         console.log("Form submitted, player name:", playerName);
+
         if (playerName) {
             localStorage.setItem("playerName", playerName);
             console.log("Player name stored in localStorage.");
-            window.location.href = "game.html";
+            window.location.href = "./game.html";  // Redirect to game.html
+        } else {
+            console.log("No player name entered!");
         }
     });
 }
 
-// Game logic
+// Game logic (remains unchanged)
 if (window.location.pathname === "/game.html") {
     const playerName = localStorage.getItem("playerName");
     console.log("Player name retrieved from localStorage:", playerName);
@@ -22,8 +27,9 @@ if (window.location.pathname === "/game.html") {
         document.getElementById("player-name").textContent = playerName;
     } else {
         console.log("No player name found, redirecting to index.html");
-        window.location.href = "index.html";
+        window.location.href = "index.html";  // Redirect back to the index page if no player name
     }
+}
 
     function chooseOption(choice) {
         console.log("Player chose:", choice);
