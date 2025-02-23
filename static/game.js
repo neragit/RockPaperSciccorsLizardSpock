@@ -1,7 +1,7 @@
 console.log("game.js is loaded");
 
 // Form logic
-if (window.location.pathname === "/") {
+if (window.location.pathname === "/index.html") {
     document.getElementById("name-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting and reloading
         const playerName = document.getElementById("player-name").value;
@@ -17,8 +17,9 @@ if (window.location.pathname === "/") {
     });
 }
 
+
 // Game logic (remains unchanged)
-if (window.location.pathname === "/game.html") {
+if (window.location.pathname.endsWith("game.html")) {
     const playerName = localStorage.getItem("playerName");
     console.log("Player name retrieved from localStorage:", playerName);
     if (playerName) {
@@ -28,6 +29,7 @@ if (window.location.pathname === "/game.html") {
         window.location.href = "index.html";  // Redirect back to the index page if no player name
     }
 }
+
 
 function chooseOption(choice) {
     console.log("Player chose:", choice);
