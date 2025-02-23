@@ -16,7 +16,7 @@ if (window.location.pathname === "/RockPaperSciccorsLizardSpock/") {
             localStorage.setItem("playerName", playerName);  // Store the player name in localStorage
             console.log("Player name stored in localStorage.");
             console.log("Redirecting to game.html");
-            //window.location.href = "./game.html";  // Redirect to game.html
+            window.location.href = "./game.html";  // Redirect to game.html
         } else {
             console.log("No player name entered!");
         }
