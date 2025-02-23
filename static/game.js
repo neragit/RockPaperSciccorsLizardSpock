@@ -49,9 +49,9 @@ function determineWinner(playerChoice, aiChoice) {
     const outcome = rulesMatrix[playerChoice][aiChoice];
 
     if (outcome === 1) {
-        return "You lose!";
-    } else if (outcome === -1) {
         return "You win!";
+    } else if (outcome === -1) {
+        return "You lose!";
     } else {
         return "It's a tie!";
     }
