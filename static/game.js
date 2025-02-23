@@ -37,12 +37,9 @@ function chooseOption(choice) {
 
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
-            // Remove the 'selected' class from all buttons
             buttons.forEach(function(button) {
                 button.classList.remove("selected");
             });
-    
-            // Add 'selected' class to the clicked button
             this.classList.add("selected");
         });
     });
