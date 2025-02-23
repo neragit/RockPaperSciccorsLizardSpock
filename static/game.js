@@ -26,10 +26,12 @@ if (window.location.pathname.endsWith("game.html")) {
 function chooseOption(choice) {
     const aiChoice = getAIChoice(choice);
     const result = determineWinner(choice, aiChoice);
-
-    document.getElementById("result-message").textContent = result;
-    resultMessageElement.style.display = "block";
+    const resultMessageElement = document.getElementById("result-message");
+    
     document.getElementById("ai-choice").textContent = `AI chose: ${aiChoice}`;
+    
+    resultMessageElement.textContent = result;
+    resultMessageElement.style.display = "block";
 }
 
 function getAIChoice(playerChoice) {
