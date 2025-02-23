@@ -111,7 +111,7 @@ h3 {
     color: #FF6F61;
     font-family: 'Baloo 2', cursive;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -153,3 +153,5 @@ form button {
 form button:hover {
     background-color: #FF6347;
 }
+
+
